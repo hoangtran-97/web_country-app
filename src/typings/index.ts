@@ -19,6 +19,6 @@ export type FilterItemProps = {
 };
 export type SearchProps = {
     placeholder: string;
-    query?: string;
+    query: string;
     setQuery: Function;
 };

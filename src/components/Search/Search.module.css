@@ -26,6 +26,13 @@
     height: 20px;
 }
 
+.button__close {
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
 @media (min-width: 900px) {
     .search {
         width: 90%;

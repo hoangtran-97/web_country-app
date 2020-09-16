@@ -17,7 +17,14 @@ export const Search = React.memo(
                     value={query}
                     onChange={event => setQuery(event.target.value)}
                 ></input>
-                <AiOutlineClose className={styles.icon__close}></AiOutlineClose>
+                <button
+                    onClick={() => setQuery("")}
+                    className={styles.button__close}
+                >
+                    <AiOutlineClose
+                        className={styles.icon__close}
+                    ></AiOutlineClose>
+                </button>
             </div>
         );
     }
