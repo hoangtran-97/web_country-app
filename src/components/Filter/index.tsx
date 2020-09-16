@@ -12,6 +12,7 @@ export const Filter = React.memo(
             "Languages",
             "Population",
             "Region",
+            "",
         ];
         const mobileFilterCats = ["Name", "Languages", "Population", "Region"];
 

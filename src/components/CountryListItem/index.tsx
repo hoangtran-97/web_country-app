@@ -38,6 +38,9 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                     <td>{languages[0].name}</td>
                     <td>{population}</td>
                     <td>{region}</td>
+                    <td>
+                        <button>Get</button>
+                    </td>
                 </tr>
             )}
         </>
