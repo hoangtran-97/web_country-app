@@ -11,7 +11,7 @@ export const FilterItem = ({
 }: FilterItemProps) => {
     return (
         <>
-            {filterCat === "Flag" ? (
+            {filterCat === "Flag" || filterCat === "Cart" ? (
                 <th>
                     <p>{filterCat}</p>
                 </th>
