@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    font-size: 12px;
+    width: 80px;
+    font-size: 10px;
 }
 
 .icon {
@@ -20,6 +20,7 @@
         margin-left: 5px;
     }
     .container {
-        width: 100px;
+        width: 150px;
+        font-size: 14px;
     }
 }

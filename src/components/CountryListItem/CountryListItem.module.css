@@ -1,6 +1,9 @@
 .flag {
     width: 300px;
     height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
@@ -8,9 +11,8 @@
 }
 
 .text__container {
-    float: left;
-    line-height: 22px;
-    display: flex;
+    display: table-row;
+    font-size: 12px;
 }
 
 @media (min-width: 900px) {
