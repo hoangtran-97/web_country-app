@@ -6,13 +6,13 @@ import styles from "./CountryListItem.module.css";
 export const CountryListItem = ({ country, width }: CountryListItemProps) => {
     const { name, flag, languages, region, population } = country;
     return (
-        <tr className={styles.container}>
+        <tr>
             <td>
                 <img alt="flag" src={flag} className={styles.flag}></img>
             </td>
 
             {width <= 900 ? (
-                <td className={styles.container_text}>
+                <td>
                     <p>{name}</p>
                     <p>{languages[0].name}</p>
                     <p>{population}</p>

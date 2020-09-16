@@ -9,10 +9,14 @@ table {
 }
 
 th {
-    width: auto
+    text-align: center;
+    vertical-align: middle;
 }
 
-td {}
+td {
+    text-align: center;
+    vertical-align: middle;
+}
 
 thead {
     background-color: aquamarine;
