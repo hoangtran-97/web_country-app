@@ -4,9 +4,11 @@
 }
 
 table {
+    margin-top: 20px;
     width: 100%;
     table-layout: fixed;
-    border-spacing: 5px;
+    border-spacing: 10px;
+    border-collapse: separate;
 }
 
 th, td {
@@ -15,6 +17,6 @@ th, td {
     padding: 0px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
+thead {
+    border: 1px black solid
 }

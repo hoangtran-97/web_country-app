@@ -23,31 +23,34 @@ export const Filter = React.memo(
         ];
 
         return (
-            <thead className={styles.container}>
-                {width > 900 ? (
-                    <tr>
-                        {filterCats.map(filterCat => (
-                            <FilterItem
-                                filterCat={filterCat}
-                                key={filterCat}
-                                activeFilter={activeFilter}
-                                setActiveFilter={setActiveFilter}
-                            ></FilterItem>
-                        ))}
-                    </tr>
-                ) : (
-                    <tr>
-                        {mobileFilterCats.map(filterCat => (
-                            <FilterItem
-                                filterCat={filterCat}
-                                key={filterCat}
-                                activeFilter={activeFilter}
-                                setActiveFilter={setActiveFilter}
-                            ></FilterItem>
-                        ))}
-                    </tr>
-                )}
-            </thead>
+            <>
+                <thead className={styles.container}>
+                    {width > 900 ? (
+                        <tr>
+                            {filterCats.map(filterCat => (
+                                <FilterItem
+                                    filterCat={filterCat}
+                                    key={filterCat}
+                                    activeFilter={activeFilter}
+                                    setActiveFilter={setActiveFilter}
+                                ></FilterItem>
+                            ))}
+                        </tr>
+                    ) : (
+                        <tr>
+                            {mobileFilterCats.map(filterCat => (
+                                <FilterItem
+                                    filterCat={filterCat}
+                                    key={filterCat}
+                                    activeFilter={activeFilter}
+                                    setActiveFilter={setActiveFilter}
+                                ></FilterItem>
+                            ))}
+                        </tr>
+                    )}
+                </thead>
+                <tr className={styles.spacing}></tr>
+            </>
         );
     }
 );
