@@ -3,9 +3,22 @@
     height: 150px;
 }
 
+.container {
+    display: table-row;
+}
+
+.text__container {
+    float: left;
+    line-height: 22px;
+    display: flex;
+}
+
 @media (min-width: 900px) {
     .flag {
         width: 100px;
         height: 50px;
+    }
+    .container {
+        display: table-row;
     }
 }
