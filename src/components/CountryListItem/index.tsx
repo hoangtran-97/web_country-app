@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import { CountryListItemProps } from '../../typings'
-import styles from './CountryListItem.module.css'
+import { CountryListItemProps } from "../../typings";
+import styles from "./CountryListItem.module.css";
 
 export const CountryListItem = ({ country, width }: CountryListItemProps) => {
-    const { name, flag, languages, region, population } = country
+    const { name, flag, languages, region, population } = country;
     return (
         <tr className={styles.container}>
             <td>
@@ -27,5 +27,5 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                 </>
             )}
         </tr>
-    )
-}
+    );
+};

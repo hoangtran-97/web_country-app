@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-import { SearchProps } from '../../typings'
-import styles from './Search.module.css'
+import { SearchProps } from "../../typings";
+import styles from "./Search.module.css";
 
 export const Search = React.memo(
     ({ placeholder, query, setQuery }: SearchProps) => {
@@ -12,6 +12,6 @@ export const Search = React.memo(
                 value={query}
                 onChange={event => setQuery(event.target.value)}
             ></input>
-        )
+        );
     }
-)
+);

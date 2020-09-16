@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-import { CountryListItem } from '../CountryListItem'
-import { CountryListProps } from '../../typings'
+import { CountryListItem } from "../CountryListItem";
+import { CountryListProps } from "../../typings";
 
 export const CountryList = ({ countries, width }: CountryListProps) => {
     return (
@@ -15,5 +15,5 @@ export const CountryList = ({ countries, width }: CountryListProps) => {
                     ></CountryListItem>
                 ))}
         </tbody>
-    )
-}
+    );
+};

@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
-import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai'
-import { FilterItemProps } from '../../typings'
-import styles from './FilterItem.module.css'
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import { FilterItemProps } from "../../typings";
+import styles from "./FilterItem.module.css";
 
 export const FilterItem = ({
     filterCat,
@@ -11,7 +11,7 @@ export const FilterItem = ({
 }: FilterItemProps) => {
     return (
         <tr>
-            {filterCat === 'Flag' ? (
+            {filterCat === "Flag" ? (
                 <>
                     <th className={styles.container}>
                         <p>{filterCat}</p>
@@ -37,5 +37,5 @@ export const FilterItem = ({
                 </th>
             )}
         </tr>
-    )
-}
+    );
+};

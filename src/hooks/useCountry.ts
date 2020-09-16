@@ -1,84 +1,84 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from "react";
 
-const baseURL = 'https://restcountries.eu/rest/v2'
+const baseURL = "https://restcountries.eu/rest/v2";
 
 export const useCountry = (query: string, activeFilter: string) => {
-    const [data, setData] = useState([])
-    const [error, setError] = useState(null)
+    const [data, setData] = useState([]);
+    const [error, setError] = useState(null);
     //One local copy so no more additional API calls
-    const [countries, setCountries] = useState([])
+    const [countries, setCountries] = useState([]);
     //Fetch initial data from API
 
     useEffect(() => {
         const loadData = async () => {
-            const URL_SEARCH_ALL = `${baseURL}/all`
+            const URL_SEARCH_ALL = `${baseURL}/all`;
             try {
-                const response = await fetch(URL_SEARCH_ALL)
-                const json = await response.json()
-                setData(json)
-                setCountries(json)
+                const response = await fetch(URL_SEARCH_ALL);
+                const json = await response.json();
+                setData(json);
+                setCountries(json);
             } catch (error) {
-                setError(error)
+                setError(error);
             }
-        }
-        loadData()
-    }, [])
+        };
+        loadData();
+    }, []);
 
     //Sorting
     useEffect(() => {
-        sortCountry(data)
+        sortCountry(data);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [activeFilter])
+    }, [activeFilter]);
     //Searching
     useEffect(() => {
-        searchCountry()
+        searchCountry();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [query])
+    }, [query]);
     const searchCountry = useCallback(() => {
         const sorted = [...countries].filter((country: any) =>
             country.name.toLowerCase().includes(query.toLowerCase())
-        )
-        sortCountry(sorted)
+        );
+        sortCountry(sorted);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [countries, query])
+    }, [countries, query]);
     const sortCountry = useCallback(
         (countries: any) => {
-            const filter = activeFilter.toLowerCase()
+            const filter = activeFilter.toLowerCase();
             switch (filter) {
-                case 'name':
+                case "name":
                     const sortByName = [...countries].sort((a: any, b: any) =>
                         a.name.localeCompare(b.name)
-                    )
-                    setData(sortByName)
-                    break
+                    );
+                    setData(sortByName);
+                    break;
 
-                case 'languages':
+                case "languages":
                     const sortByLanguages = [...countries].sort(
                         (a: any, b: any) =>
                             a.languages[0].name.localeCompare(
                                 b.languages[0].name
                             )
-                    )
-                    setData(sortByLanguages)
-                    break
+                    );
+                    setData(sortByLanguages);
+                    break;
 
-                case 'population':
+                case "population":
                     const sortByPop = [...countries].sort(
                         (a: any, b: any) => a.population - b.population
-                    )
-                    setData(sortByPop)
-                    break
+                    );
+                    setData(sortByPop);
+                    break;
 
-                case 'region':
+                case "region":
                     const sortByRegion = [...countries].sort((a: any, b: any) =>
                         a.region.localeCompare(b.region)
-                    )
-                    setData(sortByRegion)
-                    break
+                    );
+                    setData(sortByRegion);
+                    break;
             }
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [countries, activeFilter]
-    )
-    return [error, data]
-}
+    );
+    return [error, data];
+};

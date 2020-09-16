@@ -1,13 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import { FilterItem } from '../FilterItem'
-import { FilterProps } from '../../typings'
-import styles from './Filter.module.css'
+import { FilterItem } from "../FilterItem";
+import { FilterProps } from "../../typings";
+import styles from "./Filter.module.css";
 
 export const Filter = React.memo(
     ({ width, activeFilter, setActiveFilter }: FilterProps) => {
-        const filterCats = ['Flag', 'Name', 'Languages', 'Population', 'Region']
-        const mobileFilterCats = ['Name', 'Languages', 'Population', 'Region']
+        const filterCats = [
+            "Flag",
+            "Name",
+            "Languages",
+            "Population",
+            "Region",
+        ];
+        const mobileFilterCats = ["Name", "Languages", "Population", "Region"];
 
         return (
             <thead className={styles.container}>
@@ -35,6 +41,6 @@ export const Filter = React.memo(
                     </>
                 )}
             </thead>
-        )
+        );
     }
-)
+);
