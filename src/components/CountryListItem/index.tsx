@@ -10,7 +10,7 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
             {width <= 900 ? (
                 <>
                     <tr>
-                        <td colSpan={4}>
+                        <td colSpan={5}>
                             <img
                                 alt="flag"
                                 src={flag}
@@ -23,6 +23,9 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                         <td>{languages[0].name}</td>
                         <td>{population}</td>
                         <td>{region}</td>
+                        <td>
+                            <button>Get</button>
+                        </td>
                     </tr>
                 </>
             ) : (

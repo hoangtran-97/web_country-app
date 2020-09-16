@@ -12,9 +12,15 @@ export const Filter = React.memo(
             "Languages",
             "Population",
             "Region",
-            "",
+            "Cart",
         ];
-        const mobileFilterCats = ["Name", "Languages", "Population", "Region"];
+        const mobileFilterCats = [
+            "Name",
+            "Languages",
+            "Population",
+            "Region",
+            "Cart",
+        ];
 
         return (
             <thead className={styles.container}>
