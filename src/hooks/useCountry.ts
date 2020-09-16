@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 const baseURL = "https://restcountries.eu/rest/v2";
 
 export const useCountry = (query: string, activeFilter: string) => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(Array);
     const [error, setError] = useState(null);
     //One local copy so no more additional API calls
     const [countries, setCountries] = useState([]);
