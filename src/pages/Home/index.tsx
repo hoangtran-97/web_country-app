@@ -8,17 +8,6 @@ import { CountryList } from "../../components/CountryList";
 import styles from "./Home.module.css";
 
 export default function Home() {
-    // const dispatch = useDispatch();
-    // const products = useSelector((state: AppState) => state.product.inCart);
-
-    // const handleAddProduct = () => {
-    //     const product: Product = {
-    //         id: (+new Date()).toString(),
-    //         name: names[Math.floor(Math.random() * names.length)],
-    //         price: +(Math.random() * 10).toFixed(2),
-    //     };
-    //     dispatch(addProduct(product));
-    // };
     const [width] = useGetWindowDimension();
     const [activeFilter, setActiveFilter] = useState("Name");
     const [query, setQuery] = useState("");

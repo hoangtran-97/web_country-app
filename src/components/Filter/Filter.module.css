@@ -1,9 +1,9 @@
 .container {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 14px;
+    font-size: 14px; */
 }
 
 @media (min-width: 900px) {

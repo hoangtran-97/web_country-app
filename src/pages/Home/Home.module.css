@@ -5,9 +5,15 @@
 
 table {
     width: 100%;
+    table-layout: fixed;
 }
 
-td {
-    width: 100%;
-    text-align: center;
+th {
+    width: auto
+}
+
+td {}
+
+thead {
+    background-color: aquamarine;
 }

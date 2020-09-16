@@ -13,14 +13,15 @@
 }
 
 .container_text {
-    width: 100%;
+    /* width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
 }
 
 @media (min-width: 900px) {
     .container {
         flex-direction: row;
+        justify-content: space-evenly;
         padding-left: 30px;
         padding-right: 30px;
     }

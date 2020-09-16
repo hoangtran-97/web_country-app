@@ -10,13 +10,11 @@ export const FilterItem = ({
     setActiveFilter,
 }: FilterItemProps) => {
     return (
-        <tr>
+        <>
             {filterCat === "Flag" ? (
-                <>
-                    <th className={styles.container}>
-                        <p>{filterCat}</p>
-                    </th>
-                </>
+                <th>
+                    <p>{filterCat}</p>
+                </th>
             ) : (
                 <th>
                     <button
@@ -36,6 +34,6 @@ export const FilterItem = ({
                     </button>
                 </th>
             )}
-        </tr>
+        </>
     );
 };

@@ -18,7 +18,7 @@ export const Filter = React.memo(
         return (
             <thead className={styles.container}>
                 {width > 900 ? (
-                    <>
+                    <tr>
                         {filterCats.map(filterCat => (
                             <FilterItem
                                 filterCat={filterCat}
@@ -27,9 +27,9 @@ export const Filter = React.memo(
                                 setActiveFilter={setActiveFilter}
                             ></FilterItem>
                         ))}
-                    </>
+                    </tr>
                 ) : (
-                    <>
+                    <tr>
                         {mobileFilterCats.map(filterCat => (
                             <FilterItem
                                 filterCat={filterCat}
@@ -38,7 +38,7 @@ export const Filter = React.memo(
                                 setActiveFilter={setActiveFilter}
                             ></FilterItem>
                         ))}
-                    </>
+                    </tr>
                 )}
             </thead>
         );
