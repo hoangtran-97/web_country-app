@@ -8,7 +8,6 @@ export const useCountry = (query: string, activeFilter: string) => {
 
     useEffect(() => {
         setData(countries);
-        console.log("hook");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [countries]);
 
@@ -20,7 +19,6 @@ export const useCountry = (query: string, activeFilter: string) => {
     //Searching
     useEffect(() => {
         searchCountry(countries, query);
-        console.log("search");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [query]);
     const sortCountry = (countries: any) => {
