@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useDispatch } from "react-redux";
 
+import { ThemeContext } from "../../context";
 import { Search } from "../../components/Search";
 import { useGetWindowDimension } from "../../hooks/useGetWindowDimension";
 import { useCountry } from "../../hooks/useCountry";
@@ -14,15 +15,19 @@ export default function Home() {
     const [activeFilter, setActiveFilter] = useState("Name");
     const [query, setQuery] = useState("");
     const [countries] = useCountry(query, activeFilter);
-
     const dispatch = useDispatch();
+    const { theme } = useContext(ThemeContext);
+    console.log(theme);
 
     useEffect(() => {
         dispatch(fetchCountries());
     }, [dispatch]);
 
     return (
-        <div className={styles.home}>
+        <div
+            className={styles.home}
+            style={{ backgroundColor: theme.background }}
+        >
             <Search
                 placeholder="Search"
                 query={query}

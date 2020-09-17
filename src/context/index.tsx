@@ -1,31 +1,30 @@
 import React, { useState } from "react";
 
-export type ThemeContextProps = {
-    theme?: { foreground: string };
-    switchTheme: Function;
-};
-export type ContextProps = {
-    children: React.ReactNode;
-};
-export type ThemeProps = {
-    light: { foreground: string };
-    dark: { foreground: string };
-};
-export const themes: ThemeProps = {
-    light: { foreground: "#000000" },
-    dark: { foreground: "#000000" },
+export const themes = {
+    light: {
+        foreground: "#000000",
+        background: "#dbfac5",
+    },
+    dark: {
+        foreground: "#ffffff",
+        background: "#222222",
+    },
 };
 
-const innitialState: ThemeContextProps = {
+export type ContextChildrenProps = {
+    children: React.ReactNode;
+};
+
+const innitialState = {
     theme: themes.light,
     switchTheme: () => {},
 };
 export const ThemeContext = React.createContext(innitialState);
 
-function ThemeProvider({ children }: ContextProps) {
-    const [myTheme, setMyTheme] = useState(themes.light);
+export const ThemeProvider = ({ children }: ContextChildrenProps) => {
+    const [theme, setTheme] = useState(themes.light);
     const switchTheme = () => {
-        setMyTheme(prevState => {
+        setTheme(prevState => {
             if (prevState === themes.light) {
                 return themes.dark;
             } else {
@@ -33,9 +32,9 @@ function ThemeProvider({ children }: ContextProps) {
             }
         });
     };
-    const value = { myTheme, switchTheme };
+    const value = { theme, switchTheme };
+
     return (
         <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
     );
-}
-export default ThemeProvider;
+};
