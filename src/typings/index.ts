@@ -2,6 +2,7 @@
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export const TOGGLE_DIALOG = "TOGGLE_DIALOG";
+export const RECEIVE_COUNTRIES = "RECEIVE_COUNTRIES";
 
 export type CountryListProps = {
     countries: any;
@@ -59,6 +60,13 @@ export type ToggleDialogAction = {
     type: typeof TOGGLE_DIALOG;
     payload: {
         dialog: DialogType;
+    };
+};
+//Country
+export type ReceiveCountriesAction = {
+    type: typeof RECEIVE_COUNTRIES;
+    payload: {
+        countries: any;
     };
 };
 
