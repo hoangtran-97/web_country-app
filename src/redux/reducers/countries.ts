@@ -6,7 +6,7 @@ import {
 
 export default function countries(
     state: any = {
-        countries: [],
+        list: [],
     },
     action: CountriesActions
 ): CountriesState {
@@ -15,7 +15,7 @@ export default function countries(
             const { countries } = action.payload;
             return {
                 ...state,
-                countries: [...state.countries, countries],
+                list: [...state.list, countries],
             };
         default:
             return state;

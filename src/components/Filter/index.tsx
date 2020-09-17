@@ -49,7 +49,6 @@ export const Filter = React.memo(
                         </tr>
                     )}
                 </thead>
-                <tr className={styles.spacing}></tr>
             </>
         );
     }
