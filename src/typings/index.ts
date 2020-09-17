@@ -69,6 +69,10 @@ export type ReceiveCountriesAction = {
         countries: any;
     };
 };
+export type CountriesActions = ReceiveCountriesAction;
+export type CountriesState = {
+    countries: any[];
+};
 
 export type UiActions = ToggleDialogAction;
 
@@ -89,4 +93,5 @@ export type UiState = {
 export type AppState = {
     product: ProductState;
     ui: UiState;
+    countries: CountriesState;
 };

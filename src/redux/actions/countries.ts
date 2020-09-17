@@ -1,8 +1,8 @@
 import { Dispatch } from "redux";
 
-import { RECEIVE_COUNTRIES, ReceiveCountriesAction } from "../../typings";
+import { RECEIVE_COUNTRIES, CountriesActions } from "../../typings";
 
-export function receiveCountries(countries: any): ReceiveCountriesAction {
+export function receiveCountries(countries: any): CountriesActions {
     return {
         type: RECEIVE_COUNTRIES,
         payload: {
@@ -11,7 +11,7 @@ export function receiveCountries(countries: any): ReceiveCountriesAction {
     };
 }
 
-export function fetchCountries(baseURL: string) {
+export function fetchCountries() {
     return (dispatch: Dispatch) => {
         // return fetch(`https://restcountries.eu/rest/v2/all`)
         //     .then(resp => resp.json())
