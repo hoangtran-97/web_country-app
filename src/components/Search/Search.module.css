@@ -1,19 +1,25 @@
 .search {
+    background-color: #dbfac5;
     width: 200px;
     height: 50px;
     border: none;
     outline: none;
+    font-size: 16px;
     width: 75%;
 }
 
-.container {
+.container__search {
+    background-color: #dbfac5;
     width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px black solid;
     border-radius: 10px;
     padding: 0 10px 0;
+}
+.container {
+    background-color: #8eed4d;
+    padding: 10px;
 }
 
 .icon__search {
@@ -27,13 +33,16 @@
 }
 
 .button__close {
+    background-color: #dbfac5;
     border: none;
     outline: none;
-    background-color: white;
     cursor: pointer;
 }
 
 @media (min-width: 900px) {
+    .container {
+        padding: 20px;
+    }
     .search {
         width: 90%;
         padding-left: 20px;

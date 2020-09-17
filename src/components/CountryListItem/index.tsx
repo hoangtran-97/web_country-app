@@ -24,7 +24,7 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                         <td>{population}</td>
                         <td>{region}</td>
                         <td>
-                            <button>Get</button>
+                            <button className={styles.button__get}>Get</button>
                         </td>
                     </tr>
                 </>
@@ -42,7 +42,7 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                     <td>{population}</td>
                     <td>{region}</td>
                     <td>
-                        <button>Get</button>
+                        <button className={styles.button__get}>Get</button>
                     </td>
                 </tr>
             )}

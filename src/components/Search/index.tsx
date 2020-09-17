@@ -8,23 +8,25 @@ export const Search = React.memo(
     ({ placeholder, query, setQuery }: SearchProps) => {
         return (
             <div className={styles.container}>
-                <AiOutlineSearch
-                    className={styles.icon__search}
-                ></AiOutlineSearch>
-                <input
-                    className={styles.search}
-                    placeholder={placeholder}
-                    value={query}
-                    onChange={event => setQuery(event.target.value)}
-                ></input>
-                <button
-                    onClick={() => setQuery("")}
-                    className={styles.button__close}
-                >
-                    <AiOutlineClose
-                        className={styles.icon__close}
-                    ></AiOutlineClose>
-                </button>
+                <div className={styles.container__search}>
+                    <AiOutlineSearch
+                        className={styles.icon__search}
+                    ></AiOutlineSearch>
+                    <input
+                        className={styles.search}
+                        placeholder={placeholder}
+                        value={query}
+                        onChange={event => setQuery(event.target.value)}
+                    ></input>
+                    <button
+                        onClick={() => setQuery("")}
+                        className={styles.button__close}
+                    >
+                        <AiOutlineClose
+                            className={styles.icon__close}
+                        ></AiOutlineClose>
+                    </button>
+                </div>
             </div>
         );
     }
