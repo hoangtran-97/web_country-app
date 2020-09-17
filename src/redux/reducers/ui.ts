@@ -1,25 +1,27 @@
-import { TOGGLE_DIALOG, UiState, UiActions } from '../../types'
+import { TOGGLE_DIALOG, UiState, UiActions } from "../../typings";
 
 const defaultState: UiState = {
-  dialogOpen: {},
-}
+    dialogOpen: {},
+};
 
 export default function ui(
-  state: UiState = defaultState,
-  action: UiActions
+    state: UiState = defaultState,
+    action: UiActions
 ): UiState {
-  switch (action.type) {
-  case TOGGLE_DIALOG: {
-    return {
-      ...state,
-      dialogOpen: {
-        ...state.dialogOpen,
-        [action.payload.dialog]: !state.dialogOpen[action.payload.dialog],
-      },
-    }
-  }
+    switch (action.type) {
+        case TOGGLE_DIALOG: {
+            return {
+                ...state,
+                dialogOpen: {
+                    ...state.dialogOpen,
+                    [action.payload.dialog]: !state.dialogOpen[
+                        action.payload.dialog
+                    ],
+                },
+            };
+        }
 
-  default:
-    return state
-  }
+        default:
+            return state;
+    }
 }
