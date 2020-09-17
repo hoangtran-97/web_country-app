@@ -7,7 +7,7 @@ export const useCountry = (query: string, activeFilter: string) => {
     const countries = useSelector((state: AppState) => state.countries.list);
 
     useEffect(() => {
-        setData(countries[0]);
+        setData(countries);
         console.log("hook");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [countries]);
@@ -56,13 +56,10 @@ export const useCountry = (query: string, activeFilter: string) => {
         }
     };
     const searchCountry = (countries: any, query: string) => {
-        const dataToHandle = countries[0];
-        if (dataToHandle !== undefined) {
-            const sorted = [...dataToHandle].filter((country: any) =>
-                country.name.toLowerCase().includes(query.toLowerCase())
-            );
-            sortCountry(sorted);
-        }
+        const sorted = [...countries].filter((country: any) =>
+            country.name.toLowerCase().includes(query.toLowerCase())
+        );
+        sortCountry(sorted);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     };
 

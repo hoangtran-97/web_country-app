@@ -15,7 +15,8 @@ export default function countries(
             const { countries } = action.payload;
             return {
                 ...state,
-                list: [...state.list, countries],
+                list: [...countries],
+                // list: [...state.list, countries],
             };
         default:
             return state;
