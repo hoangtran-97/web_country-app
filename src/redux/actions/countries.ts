@@ -13,10 +13,18 @@ export function receiveCountries(countries: any): ReceiveCountriesAction {
 
 export function fetchCountries(baseURL: string) {
     return (dispatch: Dispatch) => {
-        return fetch(`https://restcountries.eu/rest/v2/all`)
-            .then(resp => resp.json())
-            .then(countries => {
+        // return fetch(`https://restcountries.eu/rest/v2/all`)
+        //     .then(resp => resp.json())
+        //     .then(countries => {
+        //         dispatch(receiveCountries(countries));
+        //     });
+        return async () => {
+            const URL_SEARCH_ALL = `https://restcountries.eu/rest/v2/all`;
+            try {
+                const response = await fetch(URL_SEARCH_ALL);
+                const countries = await response.json();
                 dispatch(receiveCountries(countries));
-            });
+            } catch (error) {}
+        };
     };
 }
