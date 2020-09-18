@@ -2,7 +2,11 @@ import React, { useContext } from "react";
 
 import { SearchProps } from "../../typings";
 import { ThemeContext } from "../../context";
-import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import {
+    AiOutlineSearch,
+    AiOutlineClose,
+    AiOutlineShoppingCart,
+} from "react-icons/ai";
 import { WiMoonAltThirdQuarter } from "react-icons/wi";
 import styles from "./Search.module.css";
 
@@ -38,16 +42,27 @@ export const Search = React.memo(
                         ></AiOutlineClose>
                     </button>
                 </div>
-                <button
-                    className={styles.button__theme}
-                    style={{ backgroundColor: theme.foreground }}
-                    onClick={switchTheme}
-                >
-                    <WiMoonAltThirdQuarter
-                        className={styles.icon__theme}
-                        style={{ color: theme.icon, transform: theme.deg }}
-                    ></WiMoonAltThirdQuarter>
-                </button>
+                <div className={styles.container__right}>
+                    <button
+                        className={styles.button__cart}
+                        style={{ backgroundColor: theme.foreground }}
+                    >
+                        <AiOutlineShoppingCart
+                            className={styles.icon__cart}
+                            style={{ color: theme.text }}
+                        ></AiOutlineShoppingCart>
+                    </button>
+                    <button
+                        className={styles.button__theme}
+                        style={{ backgroundColor: theme.foreground }}
+                        onClick={switchTheme}
+                    >
+                        <WiMoonAltThirdQuarter
+                            className={styles.icon__theme}
+                            style={{ color: theme.icon, transform: theme.deg }}
+                        ></WiMoonAltThirdQuarter>
+                    </button>
+                </div>
             </div>
         );
     }

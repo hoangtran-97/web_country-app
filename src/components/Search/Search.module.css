@@ -7,6 +7,10 @@
     width: 75%;
 }
 
+.container__right {
+    display: flex;
+}
+
 .container__search {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     width: 60%;
@@ -39,6 +43,11 @@
     height: 20px;
 }
 
+.icon__cart {
+    width: 40px;
+    height: 40px;
+}
+
 .icon__theme {
     transition: all 1000ms;
     width: 40px;
@@ -63,6 +72,12 @@
 }
 
 .button__close {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button__cart {
     border: none;
     outline: none;
     cursor: pointer;
