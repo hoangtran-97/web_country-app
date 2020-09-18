@@ -33,15 +33,25 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                         <td>{population}</td>
                         <td>{region}</td>
                         <td>
-                            <button
-                                className={styles.button__get}
-                                style={{
-                                    backgroundColor: theme.foreground,
-                                    color: theme.text,
-                                }}
-                            >
-                                Add
-                            </button>
+                            <div className={styles.container__get}>
+                                <button
+                                    className={styles.button__get}
+                                    style={{
+                                        backgroundColor: theme.foreground,
+                                        color: theme.text,
+                                    }}
+                                >
+                                    Add
+                                </button>
+                                <Link type="button" to={`/country/${name}`}>
+                                    <AiFillInfoCircle
+                                        className={styles.icon__info}
+                                        style={{
+                                            color: theme.foreground,
+                                        }}
+                                    ></AiFillInfoCircle>
+                                </Link>
+                            </div>
                         </td>
                     </tr>
                 </>
@@ -59,30 +69,30 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                             className={styles.flag}
                         ></img>
                     </td>
-                    <td className={styles.tableCell__name}>
-                        {name}
-                        <Link type="button" to={`/country/${name}`}>
-                            <AiFillInfoCircle
-                                className={styles.icon__info}
-                                style={{
-                                    color: theme.foreground,
-                                }}
-                            ></AiFillInfoCircle>
-                        </Link>
-                    </td>
+                    <td>{name}</td>
                     <td>{languages[0].name}</td>
                     <td>{population}</td>
                     <td>{region}</td>
                     <td>
-                        <button
-                            className={styles.button__get}
-                            style={{
-                                backgroundColor: theme.foreground,
-                                color: theme.text,
-                            }}
-                        >
-                            Add
-                        </button>
+                        <div className={styles.container__get}>
+                            <button
+                                className={styles.button__get}
+                                style={{
+                                    backgroundColor: theme.foreground,
+                                    color: theme.text,
+                                }}
+                            >
+                                Add
+                            </button>
+                            <Link type="button" to={`/country/${name}`}>
+                                <AiFillInfoCircle
+                                    className={styles.icon__info}
+                                    style={{
+                                        color: theme.foreground,
+                                    }}
+                                ></AiFillInfoCircle>
+                            </Link>
+                        </div>
                     </td>
                 </tr>
             )}

@@ -10,17 +10,19 @@
     display: table-row;
 }
 
+.container__get {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .text__container {
     display: table-row;
     font-size: 12px;
 }
 
-.tableCell__name {
-    text-align: center;
-    vertical-align: auto;
-}
-
 .button__get {
+    margin-right: 10px;
     border-radius: 10px;
     border: none;
     outline: none;
