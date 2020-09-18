@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AiFillInfoCircle } from "react-icons/ai";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { CountryListItemProps } from "../../typings";
+import { CountryListItemProps, AppState } from "../../typings";
 import { addProduct } from "../../redux/actions";
 import { ThemeContext } from "../../context";
 import styles from "./CountryListItem.module.css";
@@ -11,8 +11,21 @@ import styles from "./CountryListItem.module.css";
 export const CountryListItem = ({ country, width }: CountryListItemProps) => {
     const { name, flag, languages, region, population } = country;
     const { theme } = useContext(ThemeContext);
+    const cart = useSelector((state: AppState) => state.product.inCart);
     const dispatch = useDispatch();
-
+    let buttonStyle = {};
+    if (cart.find(p => p.name === country.name)) {
+        buttonStyle = {
+            backgroundColor: theme.background,
+            color: theme.text,
+            pointerEvents: "none",
+        };
+    } else {
+        buttonStyle = {
+            backgroundColor: theme.foreground,
+            color: theme.text,
+        };
+    }
     const handleAddProduct = () => {
         dispatch(addProduct(country));
     };
@@ -86,10 +99,7 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                             <button
                                 onClick={handleAddProduct}
                                 className={styles.button__get}
-                                style={{
-                                    backgroundColor: theme.foreground,
-                                    color: theme.text,
-                                }}
+                                style={buttonStyle}
                             >
                                 Add
                             </button>
