@@ -14,7 +14,7 @@ import styles from "./Home.module.css";
 export default function Home() {
     const [activeFilter, setActiveFilter] = useState("Name");
     const [query, setQuery] = useState("");
-    const [modal, setModal] = useState(false);
+    const [modal, setModal] = useState(true);
     const [countries] = useCountry(query, activeFilter);
     const [width] = useGetWindowDimension();
     const dispatch = useDispatch();

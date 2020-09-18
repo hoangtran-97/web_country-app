@@ -1,11 +1,10 @@
 .modal {
     position: absolute;
-    width: 100vw;
+    width: 70vw;
     height: 70vh;
-
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     padding: 40px;
     border-radius: 5px;
@@ -14,9 +13,24 @@
     position: relative;
     z-index: 11;
 }
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon__close {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.content {
+    overflow: scroll;
+}
 @media (min-width: 900px) {
     .modal {
-        width: 900px;
+        width: 850px;
         height: 550px;
     }
 }

@@ -33,7 +33,14 @@ export type SearchProps = {
     setQuery: Function;
     setModal: Function;
 };
+export type CartModalProps = {
+    modal: boolean;
+    setModal: Function;
+};
 
+export type CartItemProps = {
+    cart: any;
+};
 // Enum
 export enum DialogType {
     SignIn = "signIn",
