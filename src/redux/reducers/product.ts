@@ -14,9 +14,9 @@ export default function product(
     switch (action.type) {
         case ADD_PRODUCT: {
             const { product } = action.payload;
-            console.log("ADD_PRODUCT");
+            console.log("ADD_PRODUCT", product);
 
-            if (state.inCart.find(p => p.id === product.id)) {
+            if (state.inCart.find(p => p.name === product.name)) {
                 return state;
             }
             // Always return new state (e.g, new object) if changed

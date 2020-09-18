@@ -40,23 +40,23 @@ export enum DialogType {
 }
 
 // A product
-export type Product = {
-    id: string;
-    name: string;
-    price: number;
-};
+// export type Product = {
+//     id: string;
+//     name: string;
+//     price: number;
+// };
 
 export type AddProductAction = {
     type: typeof ADD_PRODUCT;
     payload: {
-        product: Product;
+        product: any;
     };
 };
 
 export type RemoveProductAction = {
     type: typeof REMOVE_PRODUCT;
     payload: {
-        product: Product;
+        product: any;
     };
 };
 
@@ -84,7 +84,7 @@ export type UiActions = ToggleDialogAction;
 export type ProductActions = AddProductAction | RemoveProductAction;
 
 export type ProductState = {
-    inCart: Product[];
+    inCart: any[];
 };
 
 // Using dynamic keys from an enum

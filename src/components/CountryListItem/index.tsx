@@ -1,21 +1,20 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AiFillInfoCircle } from "react-icons/ai";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { CountryListItemProps } from "../../typings";
-// import { addProduct } from "../../redux/actions";
+import { addProduct } from "../../redux/actions";
 import { ThemeContext } from "../../context";
 import styles from "./CountryListItem.module.css";
 
 export const CountryListItem = ({ country, width }: CountryListItemProps) => {
     const { name, flag, languages, region, population } = country;
     const { theme } = useContext(ThemeContext);
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const handleAddProduct = () => {
-        // dispatch(addProduct(country));
-        console.log("ADDED_", country);
+        dispatch(addProduct(country));
     };
     return (
         <>
