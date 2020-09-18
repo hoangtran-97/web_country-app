@@ -5,14 +5,17 @@ import {
     AiOutlineShoppingCart,
 } from "react-icons/ai";
 import { WiMoonAltThirdQuarter } from "react-icons/wi";
+import { useSelector } from "react-redux";
 
-import { SearchProps } from "../../typings";
+import { SearchProps, AppState } from "../../typings";
 import { ThemeContext } from "../../context";
 import styles from "./Search.module.css";
 
 export const Search = React.memo(
     ({ placeholder, query, setQuery }: SearchProps) => {
         const { theme, switchTheme } = useContext(ThemeContext);
+        const cart = useSelector((state: AppState) => state.product.inCart);
+        console.log(cart);
         return (
             <div
                 className={styles.container}

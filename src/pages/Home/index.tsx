@@ -8,15 +8,15 @@ import { useCountry } from "../../hooks/useCountry";
 import { Filter } from "../../components/Filter";
 import { CountryList } from "../../components/CountryList";
 import { fetchCountries } from "../../redux/actions/";
-import styles from "./Home.module.css";
 import { CartModal } from "../../components/CartModal";
+import styles from "./Home.module.css";
 
 export default function Home() {
-    const [width] = useGetWindowDimension();
     const [activeFilter, setActiveFilter] = useState("Name");
     const [query, setQuery] = useState("");
-    const [countries] = useCountry(query, activeFilter);
     const [modal, setModal] = useState(false);
+    const [countries] = useCountry(query, activeFilter);
+    const [width] = useGetWindowDimension();
     const dispatch = useDispatch();
     const { theme } = useContext(ThemeContext);
 
