@@ -32,14 +32,21 @@ export default function Home() {
                 query={query}
                 setQuery={setQuery}
             ></Search>
-            <table>
-                <Filter
-                    width={width}
-                    activeFilter={activeFilter}
-                    setActiveFilter={setActiveFilter}
-                ></Filter>
-                <CountryList countries={countries} width={width}></CountryList>
-            </table>
+            {countries.length > 0 ? (
+                <table>
+                    <Filter
+                        width={width}
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    ></Filter>
+                    <CountryList
+                        countries={countries}
+                        width={width}
+                    ></CountryList>
+                </table>
+            ) : (
+                <p>No data to display</p>
+            )}
         </div>
     );
 }
