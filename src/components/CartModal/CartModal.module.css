@@ -33,6 +33,9 @@
 .content {
     overflow: scroll;
 }
+.content__empty {
+    text-align: center;
+}
 @media (min-width: 900px) {
     .modal {
         width: 850px;

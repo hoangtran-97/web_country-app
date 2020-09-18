@@ -15,7 +15,6 @@ export const Search = React.memo(
     ({ placeholder, query, setQuery, setModal }: SearchProps) => {
         const { theme, switchTheme } = useContext(ThemeContext);
         const cart = useSelector((state: AppState) => state.product.inCart);
-        console.log(cart);
         return (
             <div
                 className={styles.container}

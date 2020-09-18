@@ -37,9 +37,17 @@ export const CartModal = ({ modal, setModal }: CartModalProps) => {
                 ></AiOutlineClose>
             </div>
             <div className={styles.content}>
-                {carts.map(cart => (
-                    <CartItem key={cart.name} cart={cart}></CartItem>
-                ))}
+                {carts.length > 0 ? (
+                    <>
+                        {carts.map(cart => (
+                            <CartItem key={cart.name} cart={cart}></CartItem>
+                        ))}
+                    </>
+                ) : (
+                    <h4 className={styles.content__empty}>
+                        Oooops your cart is empty! Time to buy some countries!
+                    </h4>
+                )}
             </div>
         </Modal>
     );
