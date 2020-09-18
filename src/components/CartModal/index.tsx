@@ -26,11 +26,14 @@ export const CartModal = ({ modal, setModal }: CartModalProps) => {
         >
             <div className={styles.header}>
                 <div></div>
-                <h3>Your shopping cart</h3>
+                <h3 style={{ color: theme.text }}>Your shopping cart</h3>
                 <AiOutlineClose
                     onClick={() => setModal(!modal)}
                     className={styles.icon__close}
-                    style={{ backgroundColor: theme.background }}
+                    style={{
+                        backgroundColor: theme.background,
+                        color: theme.text,
+                    }}
                 ></AiOutlineClose>
             </div>
             <div className={styles.content}>

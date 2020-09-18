@@ -11,6 +11,7 @@
     display: flex;
 }
 .cart__counter {
+    pointer-events: none;
     width: 25px;
     height: 25px;
     border-radius: 50%;
