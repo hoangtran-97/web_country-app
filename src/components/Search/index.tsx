@@ -54,6 +54,15 @@ export const Search = React.memo(
                             className={styles.icon__cart}
                             style={{ color: theme.text }}
                         ></AiOutlineShoppingCart>
+                        <div
+                            className={styles.cart__counter}
+                            style={{
+                                color: theme.text,
+                                backgroundColor: theme.background,
+                            }}
+                        >
+                            {cart.length}
+                        </div>
                     </button>
                     <button
                         className={styles.button__theme}
