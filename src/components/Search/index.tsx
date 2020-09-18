@@ -12,7 +12,7 @@ import { ThemeContext } from "../../context";
 import styles from "./Search.module.css";
 
 export const Search = React.memo(
-    ({ placeholder, query, setQuery }: SearchProps) => {
+    ({ placeholder, query, setQuery, setModal }: SearchProps) => {
         const { theme, switchTheme } = useContext(ThemeContext);
         const cart = useSelector((state: AppState) => state.product.inCart);
         console.log(cart);
@@ -51,6 +51,7 @@ export const Search = React.memo(
                         style={{ backgroundColor: theme.foreground }}
                     >
                         <AiOutlineShoppingCart
+                            onClick={() => setModal(true)}
                             className={styles.icon__cart}
                             style={{ color: theme.text }}
                         ></AiOutlineShoppingCart>

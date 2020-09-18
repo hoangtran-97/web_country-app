@@ -31,6 +31,7 @@ export type SearchProps = {
     placeholder: string;
     query: string;
     setQuery: Function;
+    setModal: Function;
 };
 
 // Enum

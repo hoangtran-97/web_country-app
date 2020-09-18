@@ -33,6 +33,7 @@ export default function Home() {
                 placeholder="Search"
                 query={query}
                 setQuery={setQuery}
+                setModal={setModal}
             ></Search>
             {countries.length > 0 ? (
                 <table>
