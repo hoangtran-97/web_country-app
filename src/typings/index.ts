@@ -4,6 +4,10 @@ export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export const TOGGLE_DIALOG = "TOGGLE_DIALOG";
 export const RECEIVE_COUNTRIES = "RECEIVE_COUNTRIES";
 
+export type RouteParam = {
+    id: string;
+};
+
 export type CountryListProps = {
     countries: any;
     width: number;

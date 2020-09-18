@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
-import { AppState } from "../../typings";
+import { AppState, RouteParam } from "../../typings";
 import { ThemeContext } from "../../context";
 import styles from "./SingleCountry.module.css";
 
 export const SingleCountry = () => {
-    const { id } = useParams();
+    const { id } = useParams<RouteParam>();
     const country = useSelector((state: AppState) =>
         state.countries.list.find(p => p.name === id)
     );
