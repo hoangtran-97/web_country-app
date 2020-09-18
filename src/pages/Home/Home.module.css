@@ -1,6 +1,7 @@
 .home {
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
 table {
@@ -17,6 +18,12 @@ th, td {
     padding: 0px;
 }
 
-thead {
-    border: 1px black solid
+@media (min-width: 900px) {
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        border-bottom: 1px #59ba0f solid;
+        padding: 10px 0 10px;
+    }
 }

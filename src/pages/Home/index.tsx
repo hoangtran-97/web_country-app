@@ -17,7 +17,6 @@ export default function Home() {
     const [countries] = useCountry(query, activeFilter);
     const dispatch = useDispatch();
     const { theme } = useContext(ThemeContext);
-    console.log(theme);
 
     useEffect(() => {
         dispatch(fetchCountries());
