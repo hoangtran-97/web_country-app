@@ -10,7 +10,7 @@ export function receiveCountries(countries: any): CountriesActions {
         },
     };
 }
-
+//Thunk
 export function fetchCountries() {
     return (dispatch: Dispatch) => {
         return fetch(`https://restcountries.eu/rest/v2/all`)
