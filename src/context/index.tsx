@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export const themes = {
     light: {
-        foreground: "#000000",
+        foreground: "#8eed4d",
         background: "#dbfac5",
     },
     dark: {

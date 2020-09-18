@@ -22,7 +22,7 @@ th, td {
         border-collapse: collapse;
     }
     th, td {
-        border-bottom: 1px #59ba0f solid;
+        /* border-bottom: 1px #8eed4d solid; */
         padding: 10px 0 10px;
     }
 }
