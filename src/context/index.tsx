@@ -4,10 +4,16 @@ export const themes = {
     light: {
         foreground: "#8eed4d",
         background: "#dbfac5",
+        icon: "#424242",
+        text: "#000000",
+        deg: "rotate(0deg)",
     },
     dark: {
-        foreground: "#ffffff",
-        background: "#222222",
+        foreground: "#424242",
+        background: "#6d6d6d",
+        icon: "#8eed4d",
+        text: "#ffffff",
+        deg: "rotate(180deg)",
     },
 };
 

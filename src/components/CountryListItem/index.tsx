@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { CountryListItemProps } from "../../typings";
+import { ThemeContext } from "../../context";
 import styles from "./CountryListItem.module.css";
 
 export const CountryListItem = ({ country, width }: CountryListItemProps) => {
     const { name, flag, languages, region, population } = country;
+    const { theme } = useContext(ThemeContext);
     return (
         <>
             {width <= 900 ? (
@@ -18,18 +20,36 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                             ></img>
                         </td>
                     </tr>
-                    <tr className={styles.text__container}>
+                    <tr
+                        className={styles.text__container}
+                        style={{
+                            color: theme.text,
+                        }}
+                    >
                         <td>{name}</td>
                         <td>{languages[0].name}</td>
                         <td>{population}</td>
                         <td>{region}</td>
                         <td>
-                            <button className={styles.button__get}>Get</button>
+                            <button
+                                className={styles.button__get}
+                                style={{
+                                    backgroundColor: theme.foreground,
+                                    color: theme.text,
+                                }}
+                            >
+                                Add
+                            </button>
                         </td>
                     </tr>
                 </>
             ) : (
-                <tr className={styles.container}>
+                <tr
+                    className={styles.container}
+                    style={{
+                        color: theme.text,
+                    }}
+                >
                     <td>
                         <img
                             alt="flag"
@@ -42,7 +62,15 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                     <td>{population}</td>
                     <td>{region}</td>
                     <td>
-                        <button className={styles.button__get}>Get</button>
+                        <button
+                            className={styles.button__get}
+                            style={{
+                                backgroundColor: theme.foreground,
+                                color: theme.text,
+                            }}
+                        >
+                            Add
+                        </button>
                     </td>
                 </tr>
             )}
