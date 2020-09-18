@@ -5,8 +5,8 @@ import { AiOutlineClose } from "react-icons/ai";
 
 import { AppState, CartModalProps } from "../../typings";
 import { ThemeContext } from "../../context";
-import styles from "./CartModal.module.css";
 import { CartItem } from "../CartItem";
+import styles from "./CartModal.module.css";
 
 export const CartModal = ({ modal, setModal }: CartModalProps) => {
     const { theme } = useContext(ThemeContext);
