@@ -42,6 +42,7 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                         <td>
                             <div className={styles.container__get}>
                                 <button
+                                    onClick={handleAddProduct}
                                     className={styles.button__get}
                                     style={{
                                         backgroundColor: theme.foreground,
