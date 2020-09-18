@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+
 import { FilterItemProps } from "../../typings";
 import { ThemeContext } from "../../context";
 import styles from "./FilterItem.module.css";

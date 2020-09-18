@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-
-import { SearchProps } from "../../typings";
-import { ThemeContext } from "../../context";
 import {
     AiOutlineSearch,
     AiOutlineClose,
     AiOutlineShoppingCart,
 } from "react-icons/ai";
 import { WiMoonAltThirdQuarter } from "react-icons/wi";
+
+import { SearchProps } from "../../typings";
+import { ThemeContext } from "../../context";
 import styles from "./Search.module.css";
 
 export const Search = React.memo(

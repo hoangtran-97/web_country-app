@@ -3,6 +3,7 @@ import React from "react";
 import { CountryListItem } from "../CountryListItem";
 import { CountryListProps } from "../../typings";
 import styles from "./CountryList.module.css";
+
 export const CountryList = ({ countries, width }: CountryListProps) => {
     return (
         <tbody>
