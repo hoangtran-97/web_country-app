@@ -29,6 +29,7 @@ export const ThemeContext = React.createContext(innitialState);
 
 export const ThemeProvider = ({ children }: ContextChildrenProps) => {
     const [theme, setTheme] = useState(themes.light);
+
     const switchTheme = () => {
         setTheme(prevState => {
             if (prevState === themes.light) {
