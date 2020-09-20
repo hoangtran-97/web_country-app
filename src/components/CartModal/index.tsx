@@ -36,7 +36,12 @@ export const CartModal = ({ modal, setModal }: CartModalProps) => {
                     }}
                 ></AiOutlineClose>
             </div>
-            <div className={styles.content}>
+            <div
+                className={styles.content}
+                style={{
+                    backgroundColor: theme.foreground,
+                }}
+            >
                 {carts.length > 0 ? (
                     <>
                         {carts.map(cart => (

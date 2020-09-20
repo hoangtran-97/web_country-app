@@ -13,12 +13,14 @@
     position: relative;
     z-index: 11;
 }
+
 .header {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
+
 .icon__close {
     width: 20px;
     height: 20px;
@@ -27,15 +29,20 @@
     cursor: pointer;
     transition: all 500ms;
 }
+
 .icon__close:hover {
     transform: scale(1.3);
 }
+
 .content {
-    overflow: scroll;
+    overflow: auto;
+    overflow-x: hidden;
 }
+
 .content__empty {
     text-align: center;
 }
+
 @media (min-width: 900px) {
     .modal {
         width: 850px;
