@@ -49,7 +49,12 @@ export const CartModal = ({ modal, setModal }: CartModalProps) => {
                         ))}
                     </>
                 ) : (
-                    <h4 className={styles.content__empty}>
+                    <h4
+                        className={styles.content__empty}
+                        style={{
+                            color: theme.text,
+                        }}
+                    >
                         Oooops your cart is empty! Time to buy some countries!
                     </h4>
                 )}
