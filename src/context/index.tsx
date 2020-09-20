@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { ContextChildrenProps } from "../typings";
+
 export const themes = {
     light: {
         foreground: "#8eed4d",
@@ -15,10 +17,6 @@ export const themes = {
         text: "#ffffff",
         deg: "rotate(180deg)",
     },
-};
-
-export type ContextChildrenProps = {
-    children: React.ReactNode;
 };
 
 const innitialState = {

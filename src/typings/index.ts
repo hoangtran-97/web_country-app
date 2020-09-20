@@ -8,6 +8,10 @@ export type RouteParam = {
     id: string;
 };
 
+export type ContextChildrenProps = {
+    children: React.ReactNode;
+};
+
 export type CountryListProps = {
     countries: any;
     width: number;
