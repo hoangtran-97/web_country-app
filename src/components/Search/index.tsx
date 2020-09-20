@@ -46,11 +46,11 @@ export const Search = React.memo(
                 </div>
                 <div className={styles.container__right}>
                     <button
+                        onClick={() => setModal(true)}
                         className={styles.button__cart}
                         style={{ backgroundColor: theme.foreground }}
                     >
                         <AiOutlineShoppingCart
-                            onClick={() => setModal(true)}
                             className={styles.icon__cart}
                             style={{ color: theme.text }}
                         ></AiOutlineShoppingCart>
