@@ -57,10 +57,7 @@ export const CountryListItem = ({ country, width }: CountryListItemProps) => {
                                 <button
                                     onClick={handleAddProduct}
                                     className={styles.button__get}
-                                    style={{
-                                        backgroundColor: theme.foreground,
-                                        color: theme.text,
-                                    }}
+                                    style={buttonStyle}
                                 >
                                     Add
                                 </button>
