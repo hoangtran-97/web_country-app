@@ -48,7 +48,7 @@ export const Search = React.memo(
                     <button
                         onClick={() => setModal(true)}
                         className={styles.button__cart}
-                        style={{ backgroundColor: theme.foreground }}
+                        // style={{ backgroundColor: theme.foreground }}
                     >
                         <AiOutlineShoppingCart
                             className={styles.icon__cart}
@@ -66,7 +66,7 @@ export const Search = React.memo(
                     </button>
                     <button
                         className={styles.button__theme}
-                        style={{ backgroundColor: theme.foreground }}
+                        // style={{ backgroundColor: theme.foreground }}
                         onClick={switchTheme}
                     >
                         <WiMoonAltThirdQuarter

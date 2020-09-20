@@ -10,6 +10,7 @@
 .container__right {
     display: flex;
 }
+
 .cart__counter {
     pointer-events: none;
     width: 25px;
@@ -24,8 +25,7 @@
 }
 
 .container__search {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-        0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -42,8 +42,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-        0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     padding: 10px;
 }
 
@@ -68,8 +67,8 @@
     height: 40px;
 }
 
-.button__theme:hover {
-    transform: translateY(-3px) scale(1.1);
+.button__theme:hover, .button__cart:hover {
+    transform: translateY(-3px) scale(1.2);
 }
 
 .button__theme {
@@ -83,6 +82,9 @@
     border: none;
     outline: none;
     cursor: pointer;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
 }
 
 .button__close {
@@ -97,6 +99,10 @@
     cursor: pointer;
     position: relative;
     margin-right: 20px;
+    transition: all 500ms;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
 }
 
 @media (min-width: 900px) {
