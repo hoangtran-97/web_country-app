@@ -35,7 +35,7 @@
 }
 
 ::placeholder {
-    color: black;
+    color: inherit;
 }
 
 .container {

@@ -26,9 +26,15 @@ export const Search = React.memo(
                 >
                     <AiOutlineSearch
                         className={styles.icon__search}
+                        style={{
+                            color: theme.text,
+                        }}
                     ></AiOutlineSearch>
                     <input
-                        style={{ backgroundColor: theme.background }}
+                        style={{
+                            backgroundColor: theme.background,
+                            color: theme.text,
+                        }}
                         className={styles.search}
                         placeholder={placeholder}
                         value={query}
@@ -40,6 +46,9 @@ export const Search = React.memo(
                         className={styles.button__close}
                     >
                         <AiOutlineClose
+                            style={{
+                                color: theme.text,
+                            }}
                             className={styles.icon__close}
                         ></AiOutlineClose>
                     </button>
