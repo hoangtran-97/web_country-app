@@ -89,6 +89,7 @@ export type CountriesActions = ReceiveCountriesAction;
 export type CountriesState = {
     list: any[];
 };
+export type Country = any;
 
 export type UiActions = ToggleDialogAction;
 

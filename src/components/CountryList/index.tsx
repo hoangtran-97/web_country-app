@@ -1,7 +1,7 @@
 import React from "react";
 
 import { CountryListItem } from "../CountryListItem";
-import { CountryListProps } from "../../typings";
+import { CountryListProps, Country } from "../../typings";
 import styles from "./CountryList.module.css";
 
 export const CountryList = ({ countries, width }: CountryListProps) => {
@@ -9,7 +9,7 @@ export const CountryList = ({ countries, width }: CountryListProps) => {
         <tbody>
             <tr className={styles.spacing}></tr>
             {countries &&
-                countries.map((country: any) => (
+                countries.map((country: Country) => (
                     <CountryListItem
                         country={country}
                         key={country.alpha2Code}
