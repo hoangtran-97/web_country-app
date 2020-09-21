@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { fetchCountries } from "../redux/actions/";
 import { AppState } from "../typings";
 
 export const useCountry = (query: string, activeFilter: string) => {
     const [data, setData] = useState(Array);
+    const dispatch = useDispatch();
     const countries = useSelector((state: AppState) => state.countries.list);
 
+    useEffect(() => {
+        dispatch(fetchCountries());
+    }, [dispatch]);
     useEffect(() => {
         setData(countries);
         // eslint-disable-next-line react-hooks/exhaustive-deps
