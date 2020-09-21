@@ -55,7 +55,7 @@
 
 @media (min-width: 900px) {
     .modal {
-        width: 850px;
+        width: 60vw;
         height: 550px;
     }
 }
